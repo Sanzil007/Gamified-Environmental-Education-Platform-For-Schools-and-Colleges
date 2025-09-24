@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodiversity Explorer</title>
+  <link rel="stylesheet" href="biodiversity-explorer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+  <header class="neon-header">
+    <h1>🌐 Biodiversity Explorer</h1>
+    <p>Hover over the globe to explore Earth’s living wonders.</p>
+  </header>
+
+  <!-- 3D Globe Container -->
+  <section class="globe-section">
+    <div id="globe-container"></div>
+  </section>
+
+  <!-- Flora & Fauna Section -->
+  <section class="neon-section">
+    <h2>🌿 Flora & 🐾 Fauna by Continent</h2>
+    <div class="continent-grid">
+      <div class="continent-card">Africa</div>
+      <div class="continent-card">Asia</div>
+      <div class="continent-card">Europe</div>
+      <div class="continent-card">North America</div>
+      <div class="continent-card">South America</div>
+      <div class="continent-card">Australia</div>
+      <div class="continent-card">Antarctica</div>
+    </div>
+  </section>
+
+  <!-- Marine Biodiversity Button -->
+  <section class="neon-section">
+    <h2>🌊 Marine Biodiversity</h2>
+    <a href="#" class="marine-button">Explore Marine Life (Coming Soon)</a>
+  </section>
+
+  <footer class="neon-footer">
+    <p>© 2024 EcoVerse Biodiversity Explorer. Stay curious, stay wild 🌱</p>
+  </footer>
+
+  <script src="globe.js"></script>
+</body>
+</html>

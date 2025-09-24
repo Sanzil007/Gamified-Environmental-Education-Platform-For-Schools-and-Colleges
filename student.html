@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenverse Dashboard</title>
+    <link rel="stylesheet" href="student.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/4caf50/leaf.png" alt="logo">
+            <span>Greenverse</span>
+        </div>
+        <ul class="nav-links">
+            <li id="nav-dashboard" class="active">Dashboard</li>
+            <li id="nav-learn">Learn</li>
+            <li id="nav-challenges">Challenges</li>
+            <li>Leaderboard</li>
+            <li>Community</li>
+        </ul>
+        <div class="profile">S</div>
+    </nav>
+    <main>
+        <div id="dashboard-content" class="content-section active">
+            <section class="welcome">
+                <span class="role-badge">Eco-Novice</span>
+                <h1>Welcome back, <span id="username">Sanzil Lazarus!</span></h1>
+                <p>Continue your environmental journey and make a positive impact today.</p>
+            </section>
+            <section class="stats">
+                <div class="stat-card">
+                    <p>Eco Points</p>
+                    <h2>0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Badges Earned</p>
+                    <h2>0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Tasks Completed</p>
+                    <h2>0</h2>
+                </div>
+                <div class="stat-card">
+                    <p>Class Rank</p>
+                    <h2>#0</h2>
+                </div>
+            </section>
+            <section class="progress">
+                <h3>⭐ Level Progress</h3>
+                <p>Eco-Novice</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <small>0% complete • Keep going to reach Eco-Explorer!</small>
+            </section>
+            <section class="tabs">
+                <button class="tab active">Eco Tasks</button>
+                <button class="tab">Learning</button>
+                <button class="tab">Community</button>
+            </section>
+            <div class="dashboard-content-grid">
+                <div class="available-tasks-container active-content">
+                    <div class="container-header">
+                        <h2 class="container-title">Available Tasks</h2>
+                    </div>
+                    <div class="task-list">
+                        <div class="task-item">
+                            <div class="task-details">
+                                <h4>Plant a Tree</h4>
+                                <p>Plant a sapling in your school or community area and upload a photo</p>
+                                <div class="task-info">
+                                    <span class="tag">environment</span>
+                                    <span class="points">50 points</span>
+                                </div>
+                            </div>
+                            <button class="start-task-btn">Start Task</button>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-details">
+                                <h4>Waste Segregation</h4>
+                                <p>Organize waste segregation in your class for one week</p>
+                                <div class="task-info">
+                                    <span class="tag">waste management</span>
+                                    <span class="points">30 points</span>
+                                </div>
+                            </div>
+                            <button class="start-task-btn">Start Task</button>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-details">
+                                <h4>Water Conservation</h4>
+                                <p>Install a rainwater harvesting system or fix water leaks</p>
+                                <div class="task-info">
+                                    <span class="tag">water</span>
+                                    <span class="points">40 points</span>
+                                </div>
+                            </div>
+                            <button class="start-task-btn">Start Task</button>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-details">
+                                <h4>Cycle to School</h4>
+                                <p>Use bicycle for commuting to school for 5 consecutive days</p>
+                                <div class="task-info">
+                                    <span class="tag">transport</span>
+                                    <span class="points">35 points</span>
+                                </div>
+                            </div>
+                            <button class="start-task-btn">Start Task</button>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-details">
+                                <h4>Organic Garden</h4>
+                                <p>Start an organic vegetable garden in your school</p>
+                                <div class="task-info">
+                                    <span class="tag">agriculture</span>
+                                    <span class="points">60 points</span>
+                                </div>
+                            </div>
+                            <button class="start-task-btn">Start Task</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-activity-container">
+                    <div class="container-header">
+                        <h2 class="container-title">Recent Activity</h2>
+                    </div>
+                    <div class="activity-content">
+                        <div class="no-activity-placeholder">
+                            <div class="placeholder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="#c0c0c0" stroke-width="2" fill="none" stroke-dasharray="1 3"/>
+                                    <circle cx="12" cy="12" r="4" fill="#c0c0c0"/>
+                                </svg>
+                            </div>
+                            <p>No recent activity yet.</p>
+                            <p>Complete your first eco-task to see your progress here!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="learning-content" class="content-section hidden">
+            <section class="hub-header">
+                <div class="hub-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/4caf50/book.png" alt="Learning Hub">
+                </div>
+                <h1>Knowledge Hub</h1>
+                <p>Explore interactive environmental education modules designed specifically for Indian students. Learn about climate change, biodiversity, and sustainable practices.</p>
+            </section>
+            <section class="hub-stats">
+                <div class="stat-card completed-card">
+                    <p>Completed</p>
+                    <h2>0</h2>
+                </div>
+                <div class="stat-card in-progress-card">
+                    <p>In Progress</p>
+                    <h2>1</h2>
+                </div>
+                <div class="stat-card points-card">
+                    <p>Points Earned</p>
+                    <h2>0</h2>
+                </div>
+                <div class="stat-card total-modules-card">
+                    <p>Total Modules</p>
+                    <h2>4</h2>
+                </div>
+            </section>
+            <section class="hub-modules">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Topics</button>
+                    <button class="filter-btn" data-filter="climate-change">Climate Change</button>
+                    <button class="filter-btn" data-filter="biodiversity">Biodiversity</button>
+                    <button class="filter-btn" data-filter="renewable-energy">Renewable Energy</button>
+                    <button class="filter-btn" data-filter="waste-management">Waste Management</button>
+                </div>
+                <div class="module-grid">
+                    <div class="module-card" data-category="climate-change">
+                        <div class="module-header">
+                            <h4 class="module-title">Climate Change Basics</h4>
+                            <span class="module-points">20 pts</span>
+                        </div>
+                        <p class="module-description">Understanding global warming and its impacts on India</p>
+                        <div class="module-meta">
+                            <span class="module-duration">20min</span>
+                            <span class="module-tag">climate change</span>
+                        </div>
+                    </div>
+                    <div class="module-card" data-category="biodiversity">
+                        <div class="module-header">
+                            <h4 class="module-title">Biodiversity in India</h4>
+                            <span class="module-points">25 pts</span>
+                        </div>
+                        <p class="module-description">Explore India's rich biodiversity and conservation efforts</p>
+                        <div class="module-meta">
+                            <span class="module-duration">25min</span>
+                            <span class="module-tag">biodiversity</span>
+                        </div>
+                    </div>
+                    <div class="module-card" data-category="renewable-energy">
+                        <div class="module-header">
+                            <h4 class="module-title">Renewable Energy Solutions</h4>
+                            <span class="module-points">30 pts</span>
+                        </div>
+                        <p class="module-description">Solar, wind, and other renewable energy sources</p>
+                        <div class="module-meta">
+                            <span class="module-duration">30min</span>
+                            <span class="module-tag">renewable energy</span>
+                        </div>
+                    </div>
+                    <div class="module-card" data-category="waste-management">
+                        <div class="module-header">
+                            <h4 class="module-title">Waste Management Strategies</h4>
+                            <span class="module-points">22 pts</span>
+                        </div>
+                        <p class="module-description">Effective waste reduction, reuse, and recycling</p>
+                        <div class="module-meta">
+                            <span class="module-duration">18min</span>
+                            <span class="module-tag">waste management</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="explore-btn">Explore All Modules</button>
+            </section>
+        </div>
+        <div id="challenges-content" class="content-section hidden">
+            <section class="challenges-header">
+                <h1>Eco Challenges</h1>
+                <p>Take on real-world environmental tasks, upload proof of your actions, and earn eco-points while making a positive impact on the planet.</p>
+            </section>
+            <section class="challenges-grid">
+                <div class="challenges-container">
+                    <div class="container-header">
+                        <h2>Available Challenges</h2>
+                    </div>
+                    <div class="challenge-list">
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <div class="challenge-title">
+                                    <div class="challenge-icon-container">
+                                        <img src="https://img.icons8.com/ios-filled/50/4caf50/tree-planting.png" alt="icon">
+                                    </div>
+                                    <div class="title-text">
+                                        <h4>Plant a Tree</h4>
+                                        <p>Plant a sapling in your school or community area and upload a photo</p>
+                                    </div>
+                                </div>
+                                <div class="challenge-meta">
+                                    <span class="challenge-tag">environment</span>
+                                    <span class="challenge-level">Beginner</span>
+                                    <span class="challenge-points">50 pts</span>
+                                </div>
+                            </div>
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <div class="challenge-title">
+                                    <div class="challenge-icon-container">
+                                        <img src="https://img.icons8.com/ios-filled/50/4caf50/composting.png" alt="icon">
+                                    </div>
+                                    <div class="title-text">
+                                        <h4>Organic Garden</h4>
+                                        <p>Start an organic vegetable garden in your school</p>
+                                    </div>
+                                </div>
+                                <div class="challenge-meta">
+                                    <span class="challenge-tag">agriculture</span>
+                                    <span class="challenge-level">Intermediate</span>
+                                    <span class="challenge-points">60 pts</span>
+                                </div>
+                            </div>
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <div class="challenge-title">
+                                    <div class="challenge-icon-container">
+                                        <img src="https://img.icons8.com/ios-filled/50/4caf50/water-drop.png" alt="icon">
+                                    </div>
+                                    <div class="title-text">
+                                        <h4>Water Conservation</h4>
+                                        <p>Install a rainwater harvesting system or fix water leaks</p>
+                                    </div>
+                                </div>
+                                <div class="challenge-meta">
+                                    <span class="challenge-tag">water</span>
+                                    <span class="challenge-level">Intermediate</span>
+                                    <span class="challenge-points">40 pts</span>
+                                </div>
+                            </div>
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-details">
+                                <div class="challenge-title">
+                                    <div class="challenge-icon-container">
+                                        <img src="https://img.icons8.com/ios-filled/50/4caf50/bicycle.png" alt="icon">
+                                    </div>
+                                    <div class="title-text">
+                                        <h4>Cycle to School</h4>
+                                        <p>Use bicycle for commuting to school for 5 consecutive days</p>
+                                    </div>
+                                </div>
+                                <div class="challenge-meta">
+                                    <span class="challenge-tag">transport</span>
+                                    <span class="challenge-level">Beginner</span>
+                                    <span class="challenge-points">35 pts</span>
+                                </div>
+                            </div>
+                            <button class="submit-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="submission-box">
+                    <div class="submission-header">
+                        <h2>Your Submissions</h2>
+                    </div>
+                    <div class="submission-placeholder">
+                        <p>No submissions yet.</p>
+                        <p>Complete your first eco-challenge to start earning points!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="student.js"></script>
+</body>
+</html>

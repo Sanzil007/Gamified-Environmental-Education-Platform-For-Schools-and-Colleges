@@ -1,0 +1,651 @@
+/* ===== General Styles ===== */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #f3f9ff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 56px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 32px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s, box-shadow 0.3s;
+    padding: 10px 18px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.nav-links li.active,
+.nav-links li:hover {
+    color: #4caf50;
+    box-shadow: 0 0 10px rgba(76,175,80,0.28);
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #4caf50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ===== Page Content Sections ===== */
+.content-section {
+    padding: 0 56px 56px;
+    display: none;
+    margin-bottom: 40px;
+}
+
+.content-section.active {
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ===== Dashboard Section ===== */
+#dashboard-content .welcome {
+    text-align: center;
+    margin: 48px 0 48px 0;
+}
+
+#dashboard-content .role-badge {
+    background: #eafaf0;
+    color: #4caf50;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+#dashboard-content .welcome h1 {
+    font-size: 28px;
+    margin: 16px 0 10px;
+}
+
+#dashboard-content .welcome p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+#dashboard-content .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin: 32px 0 0 0;
+}
+
+#dashboard-content .stat-card {
+    background: #eafaf0;
+    border-radius: 14px;
+    padding: 28px 20px 22px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#dashboard-content .stat-card h2 {
+    color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 6px 0 2px 0;
+}
+
+.stat-card h2::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #4caf50;
+}
+
+#dashboard-content .stat-card.completed h2::before { content: "\f00c"; }
+#dashboard-content .stat-card.progress h2::before { content: "\f144"; }
+#dashboard-content .stat-card.points h2::before { content: "\f06b"; }
+#dashboard-content .stat-card.total-modules h2::before { content: "\f02d"; }
+
+#dashboard-content .progress {
+    padding: 32px;
+    background: #fff;
+    margin: 36px 0 40px 0;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+#dashboard-content .progress-bar {
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 12px 0 0 0;
+}
+
+#dashboard-content .progress-fill {
+    height: 100%;
+    background: #4caf50;
+    width: 0%;
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+#dashboard-content .tabs {
+    display: flex;
+    justify-content: center;
+    margin: 44px 0 32px 0;
+    gap: 18px;
+}
+
+#dashboard-content .tab {
+    padding: 10px 22px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#dashboard-content .tab.active {
+    background: #4caf50;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(76,175,80,0.12);
+}
+
+#dashboard-content .tab:hover {
+    box-shadow: 0 0 8px rgba(76,175,80,0.12);
+}
+
+#dashboard-content .dashboard-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 36px;
+    margin-top: 28px;
+}
+
+/* Cards for dashboards */
+#dashboard-content .available-tasks-container,
+#dashboard-content .learning-modules-container,
+#dashboard-content .recent-activity-container {
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    margin-bottom: 32px;
+}
+
+#dashboard-content .container-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 18px;
+    margin-bottom: 25px;
+}
+
+#dashboard-content .container-title {
+    font-size: 1.28rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Task/Module Items */
+#dashboard-content .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#dashboard-content .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 26px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 0;
+}
+
+#dashboard-content .task-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+#dashboard-content .task-details p {
+    margin: 6px 0 0 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+#dashboard-content .task-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#dashboard-content .tag {
+    background-color: #eafaf0;
+    color: #4caf50;
+    padding: 4px 14px;
+    border-radius: 13px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+#dashboard-content .points {
+    font-weight: 700;
+    color: #4caf50;
+    font-size: 1rem;
+}
+
+#dashboard-content .start-task-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 12px 0 0 0;
+}
+
+#dashboard-content .start-task-btn:hover {
+    background-color: #45a049;
+}
+
+#dashboard-content .no-activity-placeholder {
+    text-align: center;
+    padding: 54px 0;
+    color: #888;
+}
+
+#dashboard-content .placeholder-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 26px;
+}
+
+#dashboard-content .no-activity-placeholder p {
+    font-size: 1rem;
+    margin: 12px 0 0 0;
+}
+
+/* ----- Learning Hub Section ----- */
+#learning-content .hub-header {
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 36px;
+}
+
+#learning-content .hub-icon img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 18px;
+}
+
+#learning-content .hub-header h1 {
+    font-size: 2.7rem;
+    margin: 0;
+}
+
+#learning-content .hub-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 680px;
+    margin: 0 auto 28px;
+}
+
+#learning-content .hub-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+    row-gap: 24px;
+    margin-bottom: 28px;
+}
+
+#learning-content .hub-stats .stat-card {
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#learning-content .hub-stats .stat-card p {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+#learning-content .hub-stats .stat-card h2 {
+    margin: 8px 0 6px 0;
+}
+
+#learning-content .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+#learning-content .filter-btn {
+    padding: 8px 22px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: all 0.18s;
+    font-weight: 500;
+}
+
+#learning-content .filter-btn.active {
+    background-color: #4caf50;
+    color: #fff;
+    border-color: #4caf50;
+}
+
+#learning-content .module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    gap: 32px;
+}
+
+#learning-content .module-card {
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 22px 20px 26px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 0;
+}
+
+#learning-content .module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+#learning-content .module-header .module-title {
+    font-weight: 600;
+    font-size: 1.13rem;
+    margin: 0;
+}
+
+#learning-content .module-points {
+    background-color: #eafaf0;
+    color: #4caf50;
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 5px 14px;
+    border-radius: 13px;
+}
+
+#learning-content .module-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 0 22px 0;
+}
+
+#learning-content .module-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+#learning-content .module-duration {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+#learning-content .module-tag {
+    font-size: 0.88rem;
+    background-color: #eafaf0;
+    color: #4caf50;
+    padding: 5px 14px;
+    border-radius: 13px;
+}
+
+#learning-content .explore-btn {
+    display: block;
+    margin: 34px auto 0;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#learning-content .explore-btn:hover {
+    background-color: #45a049;
+}
+
+/* ===== Challenges Section ===== */
+#challenges-content .challenges-header {
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 38px;
+}
+
+#challenges-content .challenges-header h1 {
+    font-size: 2.7rem;
+    margin: 0 0 14px 0;
+}
+
+#challenges-content .challenges-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+#challenges-content .challenges-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 36px;
+}
+
+#challenges-content .challenges-container {
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 30px 26px;
+    margin-bottom: 0;
+}
+
+#challenges-content .container-header h2 {
+    font-size: 1.53rem;
+    margin: 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+#challenges-content .challenge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+#challenges-content .challenge-item {
+    background-color: #f7fcf9;
+    border: 1px solid #e0e0e0;
+    border-radius: 13px;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 0;
+}
+
+#challenges-content .challenge-item:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+}
+
+#challenges-content .challenge-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#challenges-content .challenge-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#challenges-content .challenge-icon-container {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #eafaf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#challenges-content .challenge-icon-container img {
+    width: 24px;
+    height: 24px;
+}
+
+#challenges-content .title-text h4 {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+#challenges-content .title-text p {
+    margin: 7px 0 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+#challenges-content .challenge-meta {
+    display: flex;
+    gap: 12px;
+}
+
+#challenges-content .challenge-tag,
+#challenges-content .challenge-level {
+    font-size: 0.90rem;
+    background-color: #eafaf0;
+    color: #4caf50;
+    padding: 5px 14px;
+    border-radius: 13px;
+    font-weight: 500;
+}
+
+#challenges-content .challenge-points {
+    font-weight: 700;
+    color: #4caf50;
+    font-size: 1.12rem;
+}
+
+#challenges-content .submit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0 0 0;
+}
+
+#challenges-content .submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Submission Box */
+#challenges-content .submission-box {
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 28px 22px;
+    margin-bottom: 0;
+}
+
+#challenges-content .submission-header h2 {
+    font-size: 1.32rem;
+    margin: 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+#challenges-content .submission-placeholder {
+    text-align: center;
+    padding: 34px 0;
+    color: #888;
+}
+
+#challenges-content .submission-placeholder p {
+    font-size: 1rem;
+    margin: 14px 0 0 0;
+}
+
+/* ===== Responsive Spacing Tweaks ===== */
+@media (max-width: 900px) {
+    .content-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #dashboard-content .dashboard-content-grid,
+    #challenges-content .challenges-grid,
+    #learning-content .hub-stats,
+    #learning-content .module-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}

@@ -1,0 +1,104 @@
+/* General body and background */
+body {
+    background-color: #0f0f0f;
+    color: #00ffe7;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for challenge content */
+.challenge-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 255, 231, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00ffe7;
+}
+
+/* Headings */
+.challenge-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ffe7, 0 0 20px #ff00c8;
+}
+
+.challenge-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffe7;
+}
+
+.input-group input[type="file"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #00ffe7;
+    background-color: #1a1a1a;
+    color: #00ffe7;
+    font-size: 1rem;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00ffe7, #ff00c8);
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00ffe7;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff00c8, 0 0 40px #00ffe7;
+}
+
+/* Display uploaded photos */
+#uploadedPhotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#uploadedPhotos img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid #00ffe7;
+    box-shadow: 0 0 15px #00ffe7;
+}
+
+/* Status messages */
+#status-msg {
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffe7;
+    color: #00ffe7;
+}

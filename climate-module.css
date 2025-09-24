@@ -1,0 +1,58 @@
+body {
+  background-color: #0f0f0f;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.neon-header {
+  padding: 40px 20px;
+  background: linear-gradient(to right, #00ffe7, #ff00c8);
+  color: black;
+  text-shadow: 0 0 10px #00ffe7;
+}
+
+.neon-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.neon-section {
+  padding: 60px 20px;
+}
+
+.neon-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff00c8;
+  text-shadow: 0 0 8px #ff00c8;
+}
+
+.neon-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.neon-list li {
+  margin: 12px 0;
+}
+.neon-list a {
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+.neon-list a:hover {
+  color: #ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+}
+
+.neon-footer {
+  padding: 30px 20px;
+  background-color: #1a1a1a;
+  color: #888;
+  font-size: 0.9rem;
+}

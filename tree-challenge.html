@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Planting Challenge</title>
+    <link rel="stylesheet" href="tree.css">
+</head>
+<body>
+    <div class="challenge-container">
+        <h1>🌱 Tree Planting Challenge</h1>
+        <p>Upload a photo of yourself planting a tree each week.</p>
+
+        <form id="treeForm">
+            <div class="input-group">
+                <label for="treePhoto">Upload Photo</label>
+                <input type="file" id="treePhoto" accept="image/*" required>
+            </div>
+            <br><br></br></br><button type="submit">Upload</button>
+        </form>
+
+        <div id="uploadedPhotos"></div>
+        <p id="status-msg"></p>
+    </div>
+
+    <script>
+        const treeForm = document.getElementById('treeForm');
+        const uploadedPhotosDiv = document.getElementById('uploadedPhotos');
+        const statusMsg = document.getElementById('status-msg');
+
+        // store previously uploaded photos in localStorage for simplicity
+        let uploadedPhotos = JSON.parse(localStorage.getItem('treePhotos') || '[]');
+
+        function displayUploadedPhotos() {
+            uploadedPhotosDiv.innerHTML = '';
+            uploadedPhotos.forEach(photo => {
+                const img = document.createElement('img');
+                img.src = http://127.0.0.1:8000/uploads/${photo};
+                img.style.width = '200px';
+                img.style.margin = '10px';
+                uploadedPhotosDiv.appendChild(img);
+            });
+        }
+
+        displayUploadedPhotos();
+
+        treeForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const photo = document.getElementById('treePhoto').files[0];
+
+            if (!photo) {
+                statusMsg.innerText = "Please select a photo to upload.";
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', photo);
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/upload-photo', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (response.ok) {
+                    uploadedPhotos.push(data.filename);
+                    localStorage.setItem('treePhotos', JSON.stringify(uploadedPhotos));
+                    statusMsg.innerText = "Photo uploaded successfully!";
+                    displayUploadedPhotos();
+                } else {
+                    statusMsg.innerText = data.detail || "Upload failed";
+                }
+            } catch (err) {
+                console.error(err);
+                statusMsg.innerText = "Server error, try again.";
+            }
+        });
+    </script>
+</body>
+</html>

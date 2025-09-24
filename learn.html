@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenverse Learning Hub</title>
+    <link rel="stylesheet" href="student.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://img.icons8.com/ios-filled/50/4caf50/leaf.png" alt="logo">
+            <span>Greenverse</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="student.html">Dashboard</a></li>
+            <li class="active"><a href="learn.html">Learn</a></li>
+            <li><a href="#">Challenges</a></li>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+        <div class="profile">S</div>
+    </nav>
+    <main>
+        <section class="hub-header">
+            <div class="hub-icon">
+                <img src="https://img.icons8.com/ios-filled/50/4caf50/book.png" alt="Learning Hub">
+            </div>
+            <h1>Learning Hub</h1>
+            <p>Explore interactive environmental education modules designed specifically for Indian students. Learn about climate change, biodiversity, and sustainable practices.</p>
+        </section>
+        <section class="hub-stats">
+            <div class="stat-card completed-card">
+                <p>Completed</p>
+                <h2>0</h2>
+            </div>
+            <div class="stat-card in-progress-card">
+                <p>In Progress</p>
+                <h2>1</h2>
+            </div>
+            <div class="stat-card points-card">
+                <p>Points Earned</p>
+                <h2>0</h2>
+            </div>
+            <div class="stat-card total-modules-card">
+                <p>Total Modules</p>
+                <h2>4</h2>
+            </div>
+        </section>
+        <section class="hub-modules">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Topics</button>
+                <button class="filter-btn" data-filter="climate-change">Climate Change</button>
+                <button class="filter-btn" data-filter="biodiversity">Biodiversity</button>
+                <button class="filter-btn" data-filter="renewable-energy">Renewable Energy</button>
+                <button class="filter-btn" data-filter="waste-management">Waste Management</button>
+            </div>
+            <div class="module-grid">
+                <div class="module-card" data-category="climate-change">
+                    <div class="module-header">
+                        <h4 class="module-title">Climate Change Basics</h4>
+                        <span class="module-points">20 pts</span>
+                    </div>
+                    <p class="module-description">Understanding global warming and its impacts on India</p>
+                    <div class="module-meta">
+                        <span class="module-duration">20min</span>
+                        <span class="module-tag">climate change</span>
+                    </div>
+                </div>
+                <div class="module-card" data-category="biodiversity">
+                    <div class="module-header">
+                        <h4 class="module-title">Biodiversity in India</h4>
+                        <span class="module-points">25 pts</span>
+                    </div>
+                    <p class="module-description">Explore India's rich biodiversity and conservation efforts</p>
+                    <div class="module-meta">
+                        <span class="module-duration">25min</span>
+                        <span class="module-tag">biodiversity</span>
+                    </div>
+                </div>
+                <div class="module-card" data-category="renewable-energy">
+                    <div class="module-header">
+                        <h4 class="module-title">Renewable Energy Solutions</h4>
+                        <span class="module-points">30 pts</span>
+                    </div>
+                    <p class="module-description">Solar, wind, and other renewable energy sources</p>
+                    <div class="module-meta">
+                        <span class="module-duration">30min</span>
+                        <span class="module-tag">renewable energy</span>
+                    </div>
+                </div>
+                <div class="module-card" data-category="waste-management">
+                    <div class="module-header">
+                        <h4 class="module-title">Waste Management Strategies</h4>
+                        <span class="module-points">22 pts</span>
+                    </div>
+                    <p class="module-description">Effective waste reduction, reuse, and recycling</p>
+                    <div class="module-meta">
+                        <span class="module-duration">18min</span>
+                        <span class="module-tag">waste management</span>
+                    </div>
+                </div>
+            </div>
+            <button class="explore-btn">Explore All Modules</button>
+        </section>
+    </main>
+</body>
+</html>
